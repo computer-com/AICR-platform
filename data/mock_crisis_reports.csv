@@ -1,0 +1,128 @@
+id,description,crisis_type,latitude,longitude,timestamp,source,image_path
+1,Residential fire reported on Hill Street. Flames spreading.,fire,43.6971,-79.3437,2025-10-12T08:22:52Z,citizen,images/fire_6.jpg
+2,Storm damage widespread in east side.,storm,43.6126,-79.3964,2025-10-20T16:57:52Z,citizen,images/storm_2.jpg
+3,Landslide blocking Second Street. Road closed.,landslide,43.6666,-79.3796,2025-10-13T22:03:52Z,citizen,images/landslide_10.jpg
+4,Gas smell reported near downtown. Fire department on scene.,gas_leak,43.6322,-79.4171,2025-11-01T20:52:52Z,citizen,
+5,Earthquake reported. Tremors felt at Cedar Lane.,earthquake,43.6919,-79.386,2025-11-09T06:28:52Z,social,images/earthquake_7.jpg
+6,Electrical grid failure on Main Street. No power.,power_outage,43.6932,-79.3699,2025-10-19T08:29:52Z,citizen,
+7,Mudslide reported near business park. Heavy debris.,landslide,43.64,-79.37,2025-11-04T19:41:52Z,social,images/landslide_9.jpg
+8,Blizzard conditions making south end roads impassable.,storm,43.6326,-79.3947,2025-10-26T13:04:52Z,citizen,
+9,Tornado warning for industrial park area.,storm,43.6924,-79.3701,2025-11-04T15:50:52Z,social,
+10,Gas line rupture on Cedar Lane. Hazmat team responding.,gas_leak,43.626,-79.3905,2025-10-17T03:26:52Z,citizen,images/gas_leak_10.jpg
+11,Aftershock felt near city center. Residents concerned.,earthquake,43.6152,-79.3619,2025-11-04T06:54:52Z,citizen,images/earthquake_8.jpg
+12,Flash flood warning. Water knee-deep near historic district.,flood,43.6633,-79.3624,2025-11-01T17:23:52Z,citizen,images/flood_4.jpg
+13,Storm drains overwhelmed. Flooding at suburb.,flood,43.6337,-79.4234,2025-10-26T16:57:52Z,citizen,images/flood_18.jpg
+14,Rolling blackouts affecting Church Street area.,power_outage,43.6125,-79.3435,2025-10-18T13:15:52Z,citizen,
+15,Commercial building fire at commercial district. Heavy smoke.,fire,43.6038,-79.3517,2025-11-07T12:21:52Z,citizen,images/fire_16.jpg
+16,Substation failure causing outage at north district.,power_outage,43.6562,-79.409,2025-11-07T00:16:52Z,citizen,
+17,Severe flooding reported at waterfront. Evacuation needed.,flood,43.6716,-79.3892,2025-10-18T16:43:52Z,social,
+18,Storm knocked down trees near Elm Street.,storm,43.6972,-79.3378,2025-11-10T08:14:52Z,social,images/storm_11.jpg
+19,River overflowing. Flooding affecting historic district area.,flood,43.6644,-79.4193,2025-10-22T22:54:52Z,social,
+20,Aftershock felt near east side. Residents concerned.,earthquake,43.6895,-79.3709,2025-11-02T11:48:52Z,social,images/earthquake_3.jpg
+21,Flooded basement on Lake Drive. Water damage severe.,flood,43.6324,-79.3966,2025-10-30T16:33:52Z,social,images/flood_11.jpg
+22,Extended outage expected for Second Street residents.,power_outage,43.6758,-79.3435,2025-11-07T09:50:52Z,citizen,images/power_outage_7.jpg
+23,Substation failure causing outage at waterfront.,power_outage,43.6037,-79.4171,2025-11-09T08:51:52Z,citizen,
+24,Landslide after heavy rain near business park.,landslide,43.7018,-79.409,2025-11-08T01:30:52Z,citizen,images/landslide_6.jpg
+25,Severe flooding reported at downtown. Evacuation needed.,flood,43.6407,-79.3381,2025-11-03T18:18:52Z,citizen,images/flood_0.jpg
+26,Hillside erosion causing slide at shopping center.,landslide,43.6704,-79.357,2025-11-09T11:06:52Z,social,images/landslide_7.jpg
+27,Gas explosion risk at suburb. Immediate evacuation.,gas_leak,43.6551,-79.3629,2025-11-08T12:35:52Z,social,
+28,Gas leak detected near historic district. Area evacuated.,gas_leak,43.6396,-79.336,2025-11-11T08:33:52Z,social,images/gas_leak_17.jpg
+29,Flooded basement on Church Street. Water damage severe.,flood,43.6488,-79.3547,2025-10-17T00:18:52Z,citizen,images/flood_12.jpg
+30,Strong earthquake felt across suburb. Buildings shaking.,earthquake,43.6343,-79.4007,2025-10-25T23:45:52Z,citizen,
+31,Fire broke out in building on Church Street. Smoke visible.,fire,43.6861,-79.3975,2025-11-09T09:17:52Z,citizen,images/fire_11.jpg
+32,Smoke visible from First Avenue. Fire department notified.,fire,43.663,-79.341,2025-10-13T07:44:52Z,social,images/fire_7.jpg
+33,Vehicle fire blocking Park Avenue. Emergency crews responding.,fire,43.6579,-79.4147,2025-11-05T00:17:52Z,social,images/fire_4.jpg
+34,Power restored partially at downtown.,power_outage,43.6849,-79.3777,2025-10-24T06:50:52Z,citizen,
+35,Lightning strike caused fire at shopping center.,storm,43.669,-79.3764,2025-11-06T10:19:52Z,citizen,images/storm_1.jpg
+36,Wide area blackout near River Road. Cause unknown.,power_outage,43.6957,-79.3455,2025-10-28T01:08:52Z,citizen,images/power_outage_0.jpg
+37,Residential area flooded. Multiple homes affected at Broadway.,flood,43.664,-79.4161,2025-10-19T07:05:52Z,social,
+38,Landslide risk increasing near Washington Street.,landslide,43.6177,-79.3843,2025-10-23T15:27:52Z,citizen,images/landslide_5.jpg
+39,Fire spreading to adjacent properties near suburb.,fire,43.6291,-79.3669,2025-11-07T13:44:52Z,citizen,images/fire_2.jpg
+40,Major earthquake. Structural damage visible at Broadway.,earthquake,43.6803,-79.3838,2025-10-30T20:50:52Z,social,
+41,Gas line rupture on Main Street. Hazmat team responding.,gas_leak,43.6039,-79.3821,2025-10-21T19:07:52Z,citizen,
+42,Substation failure causing outage at shopping center.,power_outage,43.6581,-79.364,2025-11-08T12:09:52Z,social,images/power_outage_14.jpg
+43,Commercial building fire at downtown. Heavy smoke.,fire,43.6421,-79.4061,2025-10-20T05:29:52Z,citizen,
+44,Slope failure on Mountain View. Road impassable.,landslide,43.6353,-79.4145,2025-10-28T19:45:52Z,citizen,images/landslide_12.jpg
+45,Suspected gas leak at west quarter. Businesses closed.,gas_leak,43.6152,-79.3994,2025-11-08T17:21:52Z,social,images/gas_leak_14.jpg
+46,Storm drains overwhelmed. Flooding at east side.,flood,43.6464,-79.4041,2025-10-22T14:22:52Z,citizen,
+47,Kitchen fire at River Road. Smoke alarm activated.,fire,43.6173,-79.353,2025-11-05T22:26:52Z,social,images/fire_13.jpg
+48,Strong gas odor reported on Broadway. Emergency response.,gas_leak,43.6449,-79.411,2025-10-31T05:00:52Z,citizen,images/gas_leak_13.jpg
+49,Multiple alarm fire at historic district. Several floors affected.,fire,43.7002,-79.3557,2025-10-16T22:44:52Z,social,images/fire_5.jpg
+50,Hillside collapse at Forest Avenue. Homes threatened.,landslide,43.6642,-79.3829,2025-11-02T12:57:52Z,citizen,
+51,Wildfire approaching residential area near industrial park.,fire,43.612,-79.4136,2025-10-22T14:04:52Z,social,images/fire_8.jpg
+52,Utility crews responding to gas leak on Jefferson Road.,gas_leak,43.6962,-79.3524,2025-10-29T08:32:52Z,citizen,
+53,Severe thunderstorm with hail at Second Street.,storm,43.6996,-79.3479,2025-11-08T07:44:52Z,citizen,images/storm_15.jpg
+54,Suspected gas leak at north district. Businesses closed.,gas_leak,43.6442,-79.3576,2025-11-02T06:19:52Z,social,
+55,Heavy rain causing flooding on Oak Avenue.,flood,43.6053,-79.3362,2025-10-30T22:10:52Z,citizen,images/flood_5.jpg
+56,Gas smell reported near downtown. Fire department on scene.,gas_leak,43.6975,-79.4009,2025-10-23T12:10:52Z,social,images/gas_leak_15.jpg
+57,Electrical grid failure on Washington Street. No power.,power_outage,43.6371,-79.3983,2025-11-11T01:17:52Z,citizen,images/power_outage_6.jpg
+58,Building damage after earthquake at Mill Street.,earthquake,43.639,-79.4216,2025-10-15T00:22:52Z,citizen,
+59,Seismic event. Windows shattered at Oak Avenue.,earthquake,43.6057,-79.4224,2025-10-25T19:00:52Z,citizen,
+60,Multiple alarm fire at downtown. Several floors affected.,fire,43.6804,-79.4133,2025-10-19T14:41:52Z,citizen,
+61,Flooded basement on Valley Road. Water damage severe.,flood,43.6097,-79.3383,2025-10-27T22:44:52Z,citizen,images/flood_16.jpg
+62,Gas line rupture on River Road. Hazmat team responding.,gas_leak,43.6994,-79.408,2025-11-09T03:34:52Z,citizen,images/gas_leak_18.jpg
+63,Electrical fire reported at industrial park. Power outage.,fire,43.6107,-79.3345,2025-10-15T02:29:52Z,social,images/fire_14.jpg
+64,Landslide after heavy rain near shopping center.,landslide,43.6073,-79.3741,2025-11-03T09:01:52Z,social,
+65,River overflowing. Flooding affecting shopping center area.,flood,43.6214,-79.4149,2025-10-23T13:56:52Z,citizen,images/flood_7.jpg
+66,Seismic event. Windows shattered at Valley Road.,earthquake,43.6762,-79.3694,2025-10-13T09:22:52Z,citizen,images/earthquake_6.jpg
+67,Lightning strike caused fire at city center.,storm,43.6947,-79.3962,2025-10-24T16:02:52Z,citizen,images/storm_12.jpg
+68,Lightning strike caused fire at east side.,storm,43.6313,-79.4308,2025-10-24T08:54:52Z,citizen,images/storm_9.jpg
+69,Storm knocked out power at suburb.,power_outage,43.6744,-79.4095,2025-10-18T10:03:52Z,citizen,images/power_outage_16.jpg
+70,Water rising rapidly on Second Street. Roads completely flooded.,flood,43.6336,-79.3807,2025-10-18T16:27:52Z,citizen,images/flood_8.jpg
+71,Storm drains overwhelmed. Flooding at east side.,flood,43.6232,-79.3818,2025-11-05T06:36:52Z,social,
+72,Hillside erosion causing slide at industrial park.,landslide,43.6969,-79.4194,2025-11-11T14:13:52Z,citizen,images/landslide_18.jpg
+73,Storm drains overwhelmed. Flooding at south end.,flood,43.609,-79.3466,2025-10-24T16:41:52Z,citizen,images/flood_3.jpg
+74,Flash flood warning. Water knee-deep near waterfront.,flood,43.6998,-79.3524,2025-10-17T04:05:52Z,social,
+75,Earthquake reported. Tremors felt at Monroe Street.,earthquake,43.6803,-79.4258,2025-10-15T18:22:52Z,citizen,images/earthquake_1.jpg
+76,Rock slide blocking highway at Pine Street.,landslide,43.6317,-79.4295,2025-11-05T11:50:52Z,citizen,images/landslide_1.jpg
+77,Tornado warning for city center area.,storm,43.6297,-79.4088,2025-10-19T12:01:52Z,social,images/storm_3.jpg
+78,Water rising rapidly on Lake Drive. Roads completely flooded.,flood,43.6864,-79.412,2025-10-25T21:33:52Z,citizen,
+79,High winds and heavy rain at historic district.,storm,43.6227,-79.361,2025-10-12T03:21:52Z,citizen,
+80,Tornado warning for business park area.,storm,43.6682,-79.3483,2025-10-24T05:50:52Z,citizen,
+81,Storm knocked out power at suburb.,power_outage,43.6194,-79.3433,2025-10-13T13:07:52Z,social,
+82,Gas smell reported near commercial district. Fire department on scene.,gas_leak,43.6261,-79.4255,2025-11-04T00:27:52Z,social,images/gas_leak_2.jpg
+83,Major earthquake. Structural damage visible at Oak Avenue.,earthquake,43.6063,-79.3696,2025-10-14T18:09:52Z,citizen,
+84,Mudslide damage to property at city center.,landslide,43.671,-79.4315,2025-11-02T18:15:52Z,citizen,
+85,Aftershock felt near waterfront. Residents concerned.,earthquake,43.6793,-79.3771,2025-10-24T09:12:52Z,citizen,
+86,Lightning strike caused fire at east side.,storm,43.6609,-79.3839,2025-11-03T18:25:52Z,social,
+87,Gas leak detected near north district. Area evacuated.,gas_leak,43.635,-79.4222,2025-10-13T14:42:52Z,citizen,images/gas_leak_9.jpg
+88,High winds and heavy rain at suburb.,storm,43.646,-79.3365,2025-10-22T00:23:52Z,citizen,images/storm_14.jpg
+89,Slope failure on Mill Street. Road impassable.,landslide,43.627,-79.3604,2025-11-04T20:51:52Z,social,
+90,Electrical grid failure on Cedar Lane. No power.,power_outage,43.6674,-79.4248,2025-10-12T16:26:52Z,social,
+91,Tremors continuing at waterfront. Emergency assessment needed.,earthquake,43.6363,-79.4268,2025-10-27T21:20:52Z,citizen,
+92,Natural gas leak at downtown. Residents evacuating.,gas_leak,43.6836,-79.4145,2025-10-31T23:35:52Z,citizen,
+93,Slope failure on Madison Lane. Road impassable.,landslide,43.6373,-79.4219,2025-10-19T07:41:52Z,social,images/landslide_19.jpg
+94,Major earthquake. Structural damage visible at Monroe Street.,earthquake,43.6555,-79.3904,2025-10-13T23:32:52Z,citizen,images/earthquake_11.jpg
+95,Landslide after heavy rain near shopping center.,landslide,43.6723,-79.3945,2025-10-30T06:48:52Z,citizen,images/landslide_17.jpg
+96,Extended outage expected for Church Street residents.,power_outage,43.6357,-79.3586,2025-10-15T17:39:52Z,citizen,
+97,Natural gas leak at commercial district. Residents evacuating.,gas_leak,43.6665,-79.3461,2025-10-16T13:55:52Z,social,
+98,Landslide after heavy rain near commercial district.,landslide,43.694,-79.4092,2025-10-17T02:22:52Z,social,
+99,Commercial building fire at commercial district. Heavy smoke.,fire,43.6313,-79.3789,2025-10-19T06:56:52Z,citizen,
+100,Tornado warning for east side area.,storm,43.6677,-79.4155,2025-10-31T20:13:52Z,citizen,images/storm_10.jpg
+101,Gas line rupture on Maple Road. Hazmat team responding.,gas_leak,43.6925,-79.3793,2025-10-31T07:36:52Z,citizen,images/gas_leak_7.jpg
+102,Utility crews responding to gas leak on First Avenue.,gas_leak,43.685,-79.3471,2025-10-16T11:10:52Z,citizen,images/gas_leak_11.jpg
+103,Storm knocked down trees near Broadway.,storm,43.6047,-79.3404,2025-10-12T10:25:52Z,citizen,images/storm_13.jpg
+104,Earthquake caused cracks in building at Mountain View.,earthquake,43.6739,-79.3603,2025-11-08T23:51:52Z,social,images/earthquake_0.jpg
+105,Commercial building fire at south end. Heavy smoke.,fire,43.6077,-79.4007,2025-11-02T00:55:52Z,social,
+106,Lightning strike caused fire at waterfront.,storm,43.7005,-79.3939,2025-10-27T10:42:52Z,citizen,
+107,Residential area flooded. Multiple homes affected at Forest Avenue.,flood,43.6764,-79.3733,2025-10-30T00:31:52Z,citizen,
+108,Gas smell reported near community center. Fire department on scene.,gas_leak,43.694,-79.4083,2025-11-08T21:16:52Z,citizen,images/gas_leak_0.jpg
+109,Fire spreading to adjacent properties near business park.,fire,43.6066,-79.3423,2025-10-26T21:37:52Z,social,
+110,Residential area flooded. Multiple homes affected at Main Street.,flood,43.6188,-79.4176,2025-10-25T18:47:52Z,social,images/flood_2.jpg
+111,Fire spreading to adjacent properties near community center.,fire,43.6344,-79.3812,2025-10-23T15:01:52Z,citizen,
+112,Extended outage expected for Maple Road residents.,power_outage,43.6133,-79.3668,2025-10-17T06:42:52Z,citizen,
+113,Wide area blackout near Jefferson Road. Cause unknown.,power_outage,43.6919,-79.3552,2025-11-03T14:22:52Z,social,images/power_outage_8.jpg
+114,Landslide after heavy rain near city center.,landslide,43.6677,-79.4158,2025-10-29T14:58:52Z,citizen,images/landslide_16.jpg
+115,Storm surge flooding coastal areas near School Road.,storm,43.6827,-79.3829,2025-10-29T01:57:52Z,citizen,
+116,Landslide after heavy rain near industrial park.,landslide,43.6083,-79.4053,2025-10-23T05:12:52Z,citizen,images/landslide_3.jpg
+117,Landslide risk increasing near Pine Street.,landslide,43.6544,-79.4106,2025-11-07T18:08:52Z,social,
+118,Landslide risk increasing near Garden Street.,landslide,43.6122,-79.3497,2025-11-01T10:53:52Z,social,images/landslide_11.jpg
+119,Blizzard conditions making industrial park roads impassable.,storm,43.6883,-79.4015,2025-10-24T06:29:52Z,social,images/storm_17.jpg
+120,Electrical fire reported at north district. Power outage.,fire,43.6154,-79.3837,2025-11-11T01:36:52Z,social,
+121,Natural gas leak at community center. Residents evacuating.,gas_leak,43.6839,-79.3436,2025-10-15T19:41:52Z,citizen,images/gas_leak_8.jpg
+122,Mudslide reported near historic district. Heavy debris.,landslide,43.6529,-79.4031,2025-10-26T15:50:52Z,citizen,
+123,Rolling blackouts affecting Pine Street area.,power_outage,43.6684,-79.4108,2025-10-29T19:46:52Z,social,images/power_outage_15.jpg
+124,Water main break causing flooding near industrial park.,flood,43.6624,-79.4286,2025-10-28T21:16:52Z,citizen,
+125,Substation failure causing outage at historic district.,power_outage,43.629,-79.3672,2025-10-16T10:34:52Z,citizen,images/power_outage_1.jpg
+126,Tremors continuing at historic district. Emergency assessment needed.,earthquake,43.6346,-79.3823,2025-10-23T04:59:52Z,citizen,images/earthquake_14.jpg
+127,Extended outage expected for Washington Street residents.,power_outage,43.6638,-79.4323,2025-11-04T21:48:52Z,citizen,images/power_outage_11.jpg

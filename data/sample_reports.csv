@@ -1,0 +1,13 @@
+id,description,timestamp,lat,lon,image_path,source
+1,"Water knee-deep on Elm St near 5th","2025-11-10T14:12:00Z",43.6532,-79.3832,,citizen
+2,"Fallen tree blocking Maple Ave","2025-11-11T08:02:00Z",43.6510,-79.3470,images/tree1.jpg,citizen
+3,"Flooded basement on King St","2025-11-11T10:30:00Z",43.6485,-79.3850,images/flood2.jpg,social
+4,"Power lines down near Queen & Spadina","2025-11-11T12:45:00Z",43.6505,-79.3995,,citizen
+5,"Road closure due to flooding","2025-11-11T15:20:00Z",43.6550,-79.3800,images/road1.jpg,citizen
+6,"Debris on highway","2025-11-12T07:15:00Z",43.6600,-79.3700,,social
+7,"Emergency shelter needed","2025-11-12T09:00:00Z",43.6520,-79.3900,images/shelter1.jpg,citizen
+8,"Invalid coordinates row","2025-11-12T10:00:00Z",200.0,-300.0,,citizen
+9,"","2025-11-12T11:00:00Z",43.6530,-79.3820,,citizen
+10,"Rescue operation in progress","2025-11-12T13:30:00Z",43.6540,-79.3880,images/rescue1.jpg,social
+11,"Missing timestamp data","invalid-timestamp",43.6560,-79.3860,,citizen
+12,"Evacuation route blocked","2025-11-12T16:45:00Z",43.6570,-79.3890,images/evac1.jpg,citizen

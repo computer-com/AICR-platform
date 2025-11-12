@@ -1,0 +1,18 @@
+2025-11-12 01:08:27,681 INFO Loaded 12 rows from data/sample_reports.csv
+2025-11-12 01:08:27,685 INFO id=1 status=OK
+2025-11-12 01:08:27,685 ERROR id=1 status=ERROR msg=feature creation failed: 'charmap' codec can't encode character '\u2713' in position 2: character maps to <undefined>
+2025-11-12 01:09:29,546 INFO Loaded 12 rows from data/sample_reports.csv
+2025-11-12 01:09:29,547 INFO id=1 status=OK
+2025-11-12 01:09:29,547 INFO id=2 status=OK
+2025-11-12 01:09:29,547 INFO id=3 status=OK
+2025-11-12 01:09:29,547 INFO id=4 status=OK
+2025-11-12 01:09:29,547 INFO id=5 status=OK
+2025-11-12 01:09:29,547 INFO id=6 status=OK
+2025-11-12 01:09:29,548 INFO id=7 status=OK
+2025-11-12 01:09:29,548 ERROR id=8 status=ERROR msg=latitude out of range (-90 to 90)
+2025-11-12 01:09:29,548 ERROR id=9 status=ERROR msg=empty description
+2025-11-12 01:09:29,548 INFO id=10 status=OK
+2025-11-12 01:09:29,548 ERROR id=11 status=ERROR msg=value error: Invalid isoformat string: 'invalid-timestamp'
+2025-11-12 01:09:29,548 INFO id=12 status=OK
+2025-11-12 01:09:29,549 INFO Successfully wrote 9 features to data/raw_reports.geojson
+2025-11-12 01:09:29,549 INFO Ingestion complete: 9 valid, 3 errors

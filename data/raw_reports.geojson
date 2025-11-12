@@ -1,0 +1,158 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "description": "Water knee-deep on Elm St near 5th",
+        "timestamp": "2025-11-10T14:12:00Z",
+        "source": "citizen",
+        "image_path": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3832,
+          43.6532
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "description": "Fallen tree blocking Maple Ave",
+        "timestamp": "2025-11-11T08:02:00Z",
+        "source": "citizen",
+        "image_path": "images/tree1.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.347,
+          43.651
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "description": "Flooded basement on King St",
+        "timestamp": "2025-11-11T10:30:00Z",
+        "source": "social",
+        "image_path": "images/flood2.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.385,
+          43.6485
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "description": "Power lines down near Queen & Spadina",
+        "timestamp": "2025-11-11T12:45:00Z",
+        "source": "citizen",
+        "image_path": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3995,
+          43.6505
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "description": "Road closure due to flooding",
+        "timestamp": "2025-11-11T15:20:00Z",
+        "source": "citizen",
+        "image_path": "images/road1.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.38,
+          43.655
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "description": "Debris on highway",
+        "timestamp": "2025-11-12T07:15:00Z",
+        "source": "social",
+        "image_path": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.37,
+          43.66
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 7,
+        "description": "Emergency shelter needed",
+        "timestamp": "2025-11-12T09:00:00Z",
+        "source": "citizen",
+        "image_path": "images/shelter1.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.39,
+          43.652
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 10,
+        "description": "Rescue operation in progress",
+        "timestamp": "2025-11-12T13:30:00Z",
+        "source": "social",
+        "image_path": "images/rescue1.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.388,
+          43.654
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 12,
+        "description": "Evacuation route blocked",
+        "timestamp": "2025-11-12T16:45:00Z",
+        "source": "citizen",
+        "image_path": "images/evac1.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.389,
+          43.657
+        ]
+      }
+    }
+  ]
+}
