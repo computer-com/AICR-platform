@@ -12,11 +12,28 @@ from typing import List, Optional
 from datetime import datetime
 import json
 
-# Add parent directory to path for imports
-sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
+# Add project root to path
+project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, project_root)
 
-# Import ML predictor
-from ml_models.predict import CrisisPredictor
+# Try to import ML predictor
+try:
+    from src.ml_models.predict import CrisisPredictor
+    ML_AVAILABLE = True
+except ImportError:
+    print("[WARNING] Could not import CrisisPredictor from src.ml_models.predict")
+    print("[INFO] Attempting alternative import...")
+    try:
+        # Add src directory to path
+        src_dir = os.path.join(project_root, 'src')
+        sys.path.insert(0, src_dir)
+        from ml_models.predict import CrisisPredictor
+        ML_AVAILABLE = True
+    except ImportError as e:
+        print(f"[ERROR] Could not import ML predictor: {e}")
+        print("[INFO] API will run in demo mode without ML predictions")
+        ML_AVAILABLE = False
+        CrisisPredictor = None
 
 # Initialize FastAPI app
 app = FastAPI(
