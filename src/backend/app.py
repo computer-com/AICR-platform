@@ -52,16 +52,21 @@ app.add_middleware(
 )
 
 # Initialize ML model
-try:
-    predictor = CrisisPredictor(model_type='multimodal')
-    print("[OK] Multimodal model loaded")
-except Exception as e:
+predictor = None
+if ML_AVAILABLE and CrisisPredictor:
     try:
-        predictor = CrisisPredictor(model_type='text')
-        print("[OK] Text model loaded")
-    except Exception as e2:
-        print(f"[ERROR] Could not load any model: {e2}")
-        predictor = None
+        predictor = CrisisPredictor(model_type='multimodal')
+        print("[OK] Multimodal model loaded successfully")
+    except Exception as e:
+        print(f"[INFO] Could not load multimodal model: {e}")
+        try:
+            predictor = CrisisPredictor(model_type='text')
+            print("[OK] Text model loaded successfully")
+        except Exception as e2:
+            print(f"[WARNING] Could not load text model: {e2}")
+            print("[INFO] Running in demo mode - predictions will be simulated")
+else:
+    print("[INFO] Running in demo mode - ML models not available")
 
 # In-memory storage for demo (in production, use database)
 incidents_db = []
@@ -144,7 +149,14 @@ async def predict_crisis(report: CrisisReport):
         Prediction with crisis type, confidence, and all probabilities
     """
     if predictor is None:
-        raise HTTPException(status_code=503, detail="ML model not loaded")
+        # Demo mode - use improved keyword-based prediction
+        predicted_type, confidence, all_preds = keyword_based_prediction(report.description)
+        
+        return PredictionResponse(
+            crisis_type=predicted_type,
+            confidence=confidence,
+            all_predictions=all_preds
+        )
     
     try:
         result = predictor.predict_text(
@@ -176,16 +188,9 @@ async def submit_report(report: CrisisReport, background_tasks: BackgroundTasks)
     """
     global incident_id_counter
     
-    if predictor is None:
-        raise HTTPException(status_code=503, detail="ML model not loaded")
-    
     try:
-        # Get prediction
-        prediction = predictor.predict_text(
-            report.description,
-            report.latitude,
-            report.longitude
-        )
+        # Get prediction (using demo mode if model not loaded)
+        pred_response = await predict_crisis(report)
         
         # Create incident record
         incident = {
@@ -193,8 +198,8 @@ async def submit_report(report: CrisisReport, background_tasks: BackgroundTasks)
             "description": report.description,
             "latitude": report.latitude,
             "longitude": report.longitude,
-            "crisis_type": prediction['predicted_class'],
-            "confidence": prediction['confidence'],
+            "crisis_type": pred_response.crisis_type,
+            "confidence": pred_response.confidence,
             "timestamp": datetime.utcnow().isoformat() + "Z",
             "source": report.source,
             "status": "active",
@@ -365,6 +370,126 @@ async def clear_incidents():
     incidents_db = []
     incident_id_counter = 1
     return {"message": "All incidents cleared"}
+
+def keyword_based_prediction(description: str) -> tuple:
+    """Improved keyword-based crisis classification (fallback when ML model unavailable)"""
+    crisis_types = ['flood', 'fire', 'earthquake', 'gas_leak', 'storm', 'power_outage', 'landslide']
+    
+    description_lower = description.lower()
+    
+    # Weighted keyword matching - ORDER MATTERS (check specific phrases first)
+    keywords = {
+        'flood': {
+            'primary': ['flood', 'flooding', 'flooded', 'inundation', 'submerged', 'waterlogged'],
+            'secondary': ['rising water', 'overflow', 'river bank', 'dam breach', 'heavy rain', 'water level']
+        },
+        'fire': {
+            'primary': ['fire', 'burning', 'flames', 'blaze', 'inferno', 'combustion'],
+            'secondary': ['smoke', 'burnt', 'ash', 'heat', 'ignite', 'spreading']
+        },
+        'earthquake': {
+            'primary': ['earthquake', 'quake', 'tremor', 'seismic'],
+            'secondary': ['shaking', 'aftershock', 'ground shaking', 'magnitude', 'epicenter', 'building collapse']
+        },
+        'gas_leak': {
+            'primary': ['gas leak', 'leaking gas', 'gas explosion'],
+            'secondary': ['gas smell', 'odor', 'smell gas', 'pipeline', 'propane', 'natural gas', 'fumes']
+        },
+        'storm': {
+            'primary': ['storm', 'hurricane', 'tornado', 'cyclone', 'typhoon'],
+            'secondary': ['high wind', 'lightning', 'thunder', 'hail', 'severe weather', 'gust']
+        },
+        'power_outage': {
+            'primary': ['power outage', 'blackout', 'power failure', 'no electricity'],
+            'secondary': ['no power', 'electricity out', 'transformer', 'grid failure', 'lights out']
+        },
+        'landslide': {
+            'primary': ['landslide', 'mudslide', 'rockslide', 'debris flow'],
+            'secondary': ['slope failure', 'hillside collapse', 'erosion', 'avalanche', 'mud']
+        }
+    }
+    
+    # Score each crisis type with weighted scoring
+    scores = {}
+    matched_keywords = {}
+    
+    for crisis_type, word_dict in keywords.items():
+        score = 0
+        matches = []
+        
+        # Check primary keywords first (worth 10 points each)
+        for word in word_dict['primary']:
+            if word in description_lower:
+                score += 10
+                matches.append(word)
+        
+        # Check secondary keywords (worth 2 points each)
+        for word in word_dict['secondary']:
+            if word in description_lower:
+                score += 2
+                matches.append(word)
+        
+        if score > 0:
+            scores[crisis_type] = score
+            matched_keywords[crisis_type] = matches
+    
+    # Debug logging
+    print(f"\n[DEBUG] Description: {description}")
+    print(f"[DEBUG] Scores: {scores}")
+    print(f"[DEBUG] Matched keywords: {matched_keywords}")
+    
+    # Determine predicted type
+    if scores:
+        predicted_type = max(scores, key=scores.get)
+        max_score = scores[predicted_type]
+        
+        # Check if we have primary keyword match
+        has_primary = any(word in description_lower for word in keywords[predicted_type]['primary'])
+        
+        # Calculate confidence based on score and primary match
+        if has_primary and max_score >= 10:
+            confidence = min(0.95, 0.80 + (max_score * 0.01))
+        elif max_score >= 5:
+            confidence = min(0.75, 0.60 + (max_score * 0.02))
+        else:
+            confidence = min(0.65, 0.50 + (max_score * 0.03))
+    else:
+        # No keywords matched - random guess with low confidence
+        import random
+        predicted_type = random.choice(crisis_types)
+        confidence = random.uniform(0.30, 0.40)
+        print(f"[DEBUG] No keywords matched! Random guess: {predicted_type}")
+    
+    # Generate all predictions
+    all_preds = []
+    total_score = sum(scores.values()) if scores else 1
+    
+    for ct in crisis_types:
+        if ct == predicted_type:
+            all_preds.append({'crisis_type': ct, 'confidence': confidence})
+        else:
+            ct_score = scores.get(ct, 0)
+            if ct_score > 0:
+                # Other types with matches get proportional confidence
+                ct_confidence = min(0.40, (ct_score / (max_score + 1)) * confidence * 0.6)
+            else:
+                # No matches get very low confidence
+                import random
+                ct_confidence = random.uniform(0.01, 0.05)
+            all_preds.append({'crisis_type': ct, 'confidence': ct_confidence})
+    
+    # Sort by confidence
+    all_preds = sorted(all_preds, key=lambda x: x['confidence'], reverse=True)
+    
+    # Normalize confidences to sum to 1.0
+    conf_sum = sum(p['confidence'] for p in all_preds)
+    if conf_sum > 0:
+        for pred in all_preds:
+            pred['confidence'] = round(pred['confidence'] / conf_sum, 4)
+    
+    print(f"[DEBUG] Final prediction: {predicted_type} ({all_preds[0]['confidence']:.2%})")
+    
+    return predicted_type, all_preds[0]['confidence'], all_preds
 
 # ---- Helper Functions ----
 
